@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20231231 00:31:25.726" rpa="false" schemaversion="4">
+<suite id="s1" name="Register" source="C:\Users\mintt\Documents\school\palautusrepositorio\viikko3\login-robot\src\tests\register.robot">
+<test id="s1-t1" name="Register With Valid Username And Long Enough Password Containing Only Letters" line="28">
+<kw name="Create User And Input Login Command" type="SETUP">
+<kw name="Input New Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>new</arg>
+<status status="PASS" starttime="20231231 00:31:25.750" endtime="20231231 00:31:25.750"/>
+</kw>
+<status status="PASS" starttime="20231231 00:31:25.750" endtime="20231231 00:31:25.750"/>
+</kw>
+<status status="PASS" starttime="20231231 00:31:25.749" endtime="20231231 00:31:25.750"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>kille</arg>
+<arg>kallekille</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20231231 00:31:25.750" endtime="20231231 00:31:25.750"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20231231 00:31:25.751" endtime="20231231 00:31:25.751"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20231231 00:31:25.751" endtime="20231231 00:31:25.751"/>
+</kw>
+<status status="PASS" starttime="20231231 00:31:25.750" endtime="20231231 00:31:25.751"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>Invalid username or password</arg>
+<msg timestamp="20231231 00:31:25.751" level="FAIL">Output "Invalid username or password" is not in ['New user registered']</msg>
+<status status="FAIL" starttime="20231231 00:31:25.751" endtime="20231231 00:31:25.751"/>
+</kw>
+<status status="FAIL" starttime="20231231 00:31:25.749" endtime="20231231 00:31:25.752">Output "Invalid username or password" is not in ['New user registered']</status>
+</test>
+<status status="FAIL" starttime="20231231 00:31:25.727" endtime="20231231 00:31:25.752"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Register">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
