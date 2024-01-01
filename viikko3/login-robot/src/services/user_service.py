@@ -26,9 +26,6 @@ class UserService:
 
     def create_user(self, username, password):
         self.validate(username, password)
-
-        if not re.match("(^[a-z]{3,}$)", username) or not re.match("(?=^\w{8,}$)", password):
-            raise AuthenticationError("Invalid username or password")
         
         user = self._user_repository.create(
             User(username, password)
@@ -39,5 +36,7 @@ class UserService:
     def validate(self, username, password):
         if not username or not password:
             raise UserInputError("Username and password are required")
+        if not re.match("(^[a-z]{3,}$)", username) or not re.match("(?=^\w{8,}$)", password):
+            raise UserInputError("Invalid username or password")
 
         # toteuta loput tarkastukset tänne ja nosta virhe virhetilanteissa
