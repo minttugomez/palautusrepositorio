@@ -1,0 +1,11 @@
+[FORMAT]
+max-line-length = 150
+indent-string = "    "
+
+[REFACTORING]
+max-nested-blocks = 2
+
+[DESIGN]
+max-statements = 25
+max-attributes = 7
+min-public-methods = 1

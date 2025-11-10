@@ -1,21 +1,27 @@
+""" docstring """
+
 import requests
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
-from rich.text import Text
 from player import Player
 
 console = Console()
 
 class PlayerReader:
+    """ docstring """
     def __init__(self, url):
+        """ docstring """
         self.url = url
 
     def get_players(self):
-        return requests.get(self.url).json()
+        """ docstring """
+        return requests.get(self.url, timeout=10).json()
 
 class PlayerStats:
+    """ docstring """
     def __init__(self, reader):
+        """ docstring """
         self.reader = reader
         self.players = []
         for player_dict in reader.get_players():
@@ -23,6 +29,7 @@ class PlayerStats:
             self.players.append(player)
 
     def top_scorers_by_nationality(self, nationality):
+        """ docstring """
         players_by_nationality = []
         return_list = []
         for player in self.players:
@@ -36,6 +43,7 @@ class PlayerStats:
         return return_list
 
 def main():
+    """ docstring """
     season = input("Pick season (i.e. 2024-25): ").strip()
     nationality = input("Pick country code (i.e. FIN, SWE, CAN): ").strip().upper()
 

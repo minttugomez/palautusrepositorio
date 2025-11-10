@@ -1,12 +1,17 @@
+""" docstring """
+
 class Player:
-    def __init__(self, dict):
-        self.name = dict['name']
-        self.nationality = dict['nationality']
-        self.assists = dict['assists']
-        self.goals = dict['goals']
-        self.team = dict['team']
-        self.games = dict['games']
-        self.id = dict['id']
-    
+    """ docstring """
+    def __init__(self, dictionary):
+        """ docstring """
+        self.name = dictionary['name']
+        self.nationality = dictionary['nationality']
+        self.assists = dictionary['assists']
+        self.goals = dictionary['goals']
+        self.team = dictionary['team']
+        self.games = dictionary['games']
+        self.id = dictionary['id']
+
     def __str__(self):
+        """ docstring """
         return f"{self.name:25} {self.team:20} {self.goals} + {self.assists} = {self.goals + self.assists}"
