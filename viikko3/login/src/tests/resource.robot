@@ -42,3 +42,6 @@ Go To Starting page
 
 Register Page Should Be Open
     Title Should Be  Register
+
+Go To Register page
+    Go To  ${REGISTER_URL}

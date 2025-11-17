@@ -39,3 +39,11 @@ Reset Application Create User And Go To Login Page
     Reset Application
     Create User  kalle  kalle123
     Go To Login Page
+
+Login With Nonexistent Username
+    Reset Application
+    Go To Login Page
+    Set Username  tommi
+    Set Password  huonosalasana
+    Click Button  Login
+    Login Should Fail With Message  Invalid username or password
