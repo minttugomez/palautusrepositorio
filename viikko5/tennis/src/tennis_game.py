@@ -48,7 +48,8 @@ class TennisGame:
             return "Thirty"
         elif score == 3:
             return "Forty"
-
+        else:
+            raise ValueError(f"Invalid score for get_points: {score}")
     def get_even_points(self, points):
         if points == 0:
             return "Love-All"
