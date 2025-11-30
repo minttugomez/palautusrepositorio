@@ -22,7 +22,8 @@ class TennisGame:
             self.player1.score_point()
         elif player == str(self.player2):
             self.player2.score_point()
-
+        else:
+            raise ValueError(f"Player name '{player}' does not match either player in the game.")
     def get_score(self):
         score = ""
         advantage = self.check_advantage()
